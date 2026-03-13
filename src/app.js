@@ -10,14 +10,22 @@ app.set("view engine", "ejs");
 //   res.render("index", { message: "Hello from EJS!" });
 // });
 
-app.get("/",(req,res)=>{
-    res.render("index",{messages:[
-        "Hello from EJS!",
-        "Welcome to the EJS tutorial.",
-        "EJS is a simple templating language that lets you generate HTML markup with plain JavaScript."
-    ]})
-})
+// app.get("/",(req,res)=>{
+//     res.render("index",{messages:[
+//         "Hello from EJS!",
+//         "Welcome to the EJS tutorial.",
+//         "EJS is a simple templating language that lets you generate HTML markup with plain JavaScript."
+//     ]})
+// })
 
-
+app.get("/", (req, res) => {
+  res.render("index", {
+    messages: [
+      `<h1>Hello from EJS!</h1>`,
+      `<p>Welcome to the EJS tutorial.</p>`,
+      `<button>Click me!</button>`,
+    ],
+  });
+});
 
 module.exports = app;
