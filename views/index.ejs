@@ -27,13 +27,22 @@
             font-size: 3rem;
             margin: 20px;
         }
+        p{
+            text-align: center;
+            font-size: 3rem;
+            margin: 20px;
+        }
     </style>
 </head>
 
 <body>
-    <h1>
-        <%= message %>
-    </h1>
+
+    <% messages.forEach(message=> { %>
+        <p>
+            <%= message %>
+        </p>
+     <% }) %>
+
 </body>
 
 </html>
